@@ -1,5 +1,6 @@
 require 'sinatra'
+require 'haml'
 
 get '/' do
-  "hi there. something great will happen soon"
+  haml :index
 end
