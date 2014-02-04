@@ -8,12 +8,12 @@
     %link{href: "css/webflow.css", rel: "stylesheet", type: "text/css"}/
     %link{href: "css/zomg.webflow.css", rel: "stylesheet", type: "text/css"}/
     %script{src: "https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"}
-    :javascript
-      WebFont.load({
-        google: {
-          families: ["Montserrat:400,700","Bitter:400,700"]
-        }
-      });
+      :javascript
+        WebFont.load({
+          google: {
+            families: ["Montserrat:400,700","Bitter:400,700"]
+          }
+        });
     :javascript
       if (/mobile/i.test(navigator.userAgent)) document.documentElement.className += ' w-mobile';
     %link{href: "https://y7v4p6k4.ssl.hwcdn.net/placeholder/favicon.ico", rel: "shortcut icon", type: "image/x-icon"}/
@@ -42,15 +42,17 @@
                   %option{value: "bart_simpson"} Bart Simpson
                   %option{value: "tagalog"} Tagalog
                   %option{value: "flinstone"} Fred Flinstone
-                %textarea.w-input{placeholder: "Please enter your text"}
-                %textarea.w-input{placeholder: "Your new text will show here"}
+                %textarea#langlish-input.w-input{placeholder: "Please enter your text"}
+                %textarea#langlish-output.w-input{placeholder: "Your new text will show here"}
               .w-form-done
                 %p Thank you! Your submission has been received!
               .w-form-fail
                 %p Oops! Something went wrong while submitting the form :(
-            %a.button{href: "#"} Transform it!
+            %a#transform-text.button
+              Transform it!
             %p
           .w-col.w-col-6.call-to-action
     #page-nav-organize.section.white
     %script{src: "https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", type: "text/javascript"}
     %script{src: "js/webflow.js", type: "text/javascript"}
+    %script{src: "js/langlish.js", type: "text/javascript"}
