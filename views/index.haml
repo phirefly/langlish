@@ -36,7 +36,7 @@
             %h1.hero-header
               Pick a translation 
             .w-form
-              %form{"data-name" => "Email Form", name: "email-form"}
+              %form{"data-name" => "Email Form", name: "post[email-form]", action: "post"}
                 %select.w-select{"data-name" => "Pick a translation", name: "pick-a-translation", required: "required"}
                   %option{value: ""} Select one...
                   %option{value: "bart_simpson"} Bart Simpson
