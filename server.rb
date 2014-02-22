@@ -9,7 +9,6 @@ get '/' do
 end
 
 get '/translate' do
-  # lang = params[:lang] ||= 'default'
   flip_talk = FlipTalk.new
 
   content_type :json
