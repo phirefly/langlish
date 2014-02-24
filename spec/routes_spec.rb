@@ -11,8 +11,6 @@ describe 'Langlish App' do
       'translatedText' => "Alam mo ba This is a sentence to update. Once there was Little Red Riding Hood. It was the girl who wore red. One day she was on her way to Lola 's house. Talaga!"}
   }
 
-  let(:flip_talk_mock) { mock(FlipTalk) }
-
   include Rack::Test::Methods
 
   it "GET root" do
