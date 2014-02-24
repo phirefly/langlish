@@ -1,9 +1,8 @@
 require File.expand_path('./lib/langlish.rb')
 
-class FlipTalk
+class FlipTalk < Langlish
   def initialize
-
-    Langlish.new do
+    super do
       set_sentence do
         "This is a sentence to update. Once there was Little Red Riding Hood. It was the girl who wore red. One day she was on her way to Grandma's house."
       end
