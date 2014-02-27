@@ -18,9 +18,6 @@ class FlipTalk < Langlish
       replace_word("the"){ "ano" }
       replace_word("Grandma"){ "Lola" }
       end_sentences { "O po" }
-
-      say_original_sentence
-      say_new_sentence
     end
   end
 end

@@ -21,7 +21,6 @@ describe 'Langlish App' do
   describe 'GET translate' do
     it "default translation" do
       get '/translate'
-
       expect(last_response).to be_ok
       expect(JSON.parse(last_response.body)).to eq( expected_response )
     end
