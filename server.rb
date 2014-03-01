@@ -2,6 +2,7 @@ require 'sinatra'
 require 'haml'
 require 'json'
 require 'pry'
+require File.expand_path('./lib/flip_talk.rb')
 
 DEFAULT_TRANSLATION = 'FlipTalk'
 
