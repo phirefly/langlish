@@ -3,14 +3,18 @@
 $(document).ready(function(){
 
   $('#transform-text').click(function(){
-    var input = $('#langlish-input').val();
+    var translationValue = $('form #translation-select').val();
+    var sentenceValue = $('form #langlish-input').val();
 
-    $.ajax({
-      url: "/translate",
-      context: document.body
-    }).done(function() {
-      $('#langlish-output').val('*** output *** ');
-    });
+    var data = {
+      translation: translationValue,
+      original_text: sentenceValue
+    };
+
+    $.post('/translate',
+      data, function(data){
+        $('#langlish-output').val(data['translatedText']);
+      });
 
   });
 

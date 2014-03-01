@@ -37,11 +37,11 @@
               Pick a translation 
             .w-form
               %form{"data-name" => "Email Form", name: "post[email-form]", action: "post"}
-                %select.w-select{"data-name" => "Pick a translation", name: "pick-a-translation", required: "required"}
+                %select.w-select{"id"=>"translation-select", "data-name" => "Pick a translation", name: "pick-a-translation", required: "required"}
                   %option{value: ""} Select one...
-                  %option{value: "bart_simpson"} Bart Simpson
+                  %option{value: "BartSimpson"} Bart Simpson
                   %option{value: "FlipTalk"} FlipTalk
-                  %option{value: "flinstone"} Fred Flinstone
+                  %option{value: "Flinstone"} Fred Flinstone
                 %textarea#langlish-input.w-input{placeholder: "Please enter your text"}
                 %textarea#langlish-output.w-input{placeholder: "Your new text will show here"}
               .w-form-done
