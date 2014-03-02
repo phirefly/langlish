@@ -11,9 +11,7 @@ get '/' do
 end
 
 post '/translate' do
-  translation_klass = (Object.const_get params[:translation] || DEFAULT_TRANSLATION).new
-  puts "***> #{params[:original_text]}"
-  # translation_klass.set_sentence(params[:original_text])
+  translation_klass = (Object.const_get params[:translation] || DEFAULT_TRANSLATION).new params[:original_text]
 
   content_type :json
     { :originalText => translation_klass.say_original_sentence, :translatedText => translation_klass.say_new_sentence}.to_json

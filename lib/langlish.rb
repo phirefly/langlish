@@ -1,7 +1,7 @@
 class Langlish
   attr_reader :original_sentence
 
-  def initialize(&block)
+  def initialize(sentence, &block)
     instance_eval(&block) if block
   end
 
