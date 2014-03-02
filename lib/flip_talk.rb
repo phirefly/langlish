@@ -1,7 +1,5 @@
-require File.expand_path('./lib/langlish.rb')
-
 class FlipTalk < Langlish
-  def initialize(original_sentence)
+  def initialize original_sentence
     super do
       set_sentence do
         original_sentence
