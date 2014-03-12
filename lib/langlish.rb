@@ -2,12 +2,12 @@ class Langlish
   attr_reader :original_sentence
 
   def initialize(sentence, &block)
+    @original_sentence = sentence
     instance_eval(&block) if block
   end
 
   def set_sentence(&block)
-    @original_sentence = block.call
-    @sentence ||= @original_sentence
+    @original_sentence
   end
 
   def on_beginning(&block)
@@ -23,11 +23,11 @@ class Langlish
   end
 
   def say_new_sentence
-    "#{@beginning} #{@sentence} #{@end}"
+    "#{@beginning} #{@original_sentence} #{@end}"
   end
 
   def replace_word(word, &block)
-    @sentence = @original_sentence.gsub(/#{word}(\s*)/i, "#{block.call} ")
+    @original_sentence.gsub(/#{word}(\s*)/i, "#{block.call} ")
   end
 
   def end_sentences

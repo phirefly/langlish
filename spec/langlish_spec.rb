@@ -3,11 +3,7 @@ require 'spec_helper'
 describe Langlish do
   context 'non-dsl' do
     let (:dsl) {
-      Langlish.new do
-        set_sentence do
-          "The force is strong with this one."
-        end
-
+      Langlish.new('The force is strong with this one.') do
         on_beginning do
           "Alam mo ba"
         end
@@ -40,14 +36,12 @@ describe Langlish do
 
     describe '#set_sentence' do
         let(:langlish) {
-          Langlish.new do
-            set_sentence {"say something"}
-            end
+          Langlish.new('say something') do
+          end
         }
 
       it 'sets instance variables' do
         langlish.instance_variable_get(:@original_sentence).should == 'say something'
-        langlish.instance_variable_get(:@sentence).should == 'say something'
       end
 
       it 'uses an existing sentence'

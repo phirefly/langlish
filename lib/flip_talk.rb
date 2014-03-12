@@ -1,10 +1,6 @@
 class FlipTalk < Langlish
   def initialize original_sentence
     super do
-      set_sentence do
-        original_sentence
-      end
-
       on_beginning do
         "Alam mo ba"
       end
